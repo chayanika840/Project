@@ -1,5 +1,7 @@
 # Project
 
-This repo consists of projects
+This repo consists of codes and solutions related to DSA
 
-## hackoctoberfest
+
+
+
