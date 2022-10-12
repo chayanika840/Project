@@ -1,6 +1,6 @@
 #include <bits/stdc++.h>
 using namespace std;
-
+//to create a binary heap
 struct Node
 {
     int data;
