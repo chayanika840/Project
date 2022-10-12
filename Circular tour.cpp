@@ -1,6 +1,6 @@
 #include <bits/stdc++.h>
 using namespace std;
-
+// to create a program to simply the code
 struct petrolPump
 {
     int petrol;
@@ -46,7 +46,7 @@ int main()
         int n;
         cin >> n;
         petrolPump p[n];
-        for (int i = 0; i < n; i++)
+        for (int i = 1; i <= n; i++)
             cin >> p[i].petrol >> p[i].distance;
         Solution obj;
         cout << obj.tour(p, n) << endl;

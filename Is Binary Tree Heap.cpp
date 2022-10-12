@@ -1,6 +1,6 @@
 #include <bits/stdc++.h>
 using namespace std;
-
+//to create a binary heap
 struct Node
 {
     int data;
@@ -17,7 +17,7 @@ struct Node
 Node *buildTree(string str)
 {
     // Corner Case
-    if (str.length() == 0 || str[0] == 'N')
+    if (str.length() == 0 || str[0] == 'N' || str[0] == 'n' )
         return NULL;
 
     // Creating vector of strings from input
