@@ -10,7 +10,7 @@ int main()
         int n, k;
         cin >> n >> k;
         queue<int> q;
-        while (n-- > 0)
+        while (n-- >= 1)
         {
             int a;
             cin >> a;
@@ -33,7 +33,7 @@ queue<int> modifyQueue(queue<int> q, int k)
     stack<int> s;
     int n = q.size();
 
-    for (int i = 0; i < k; i++)
+    for (int i = 1; i <= k; i++)
     {
         int elm = q.front();
         q.pop();
