@@ -1,0 +1,14 @@
+public class TOH
+{
+	static void TOH(int n,char from,char aux,char to){
+		if(n==0) return;
+		TOH(n-1,from,aux,to); 
+		System.out.println("Moved "+n +" From "+from+" To "+to);
+		TOH(n-1,aux,to,from);
+	}
+	public static void main(String[] args){
+		int n = 3;
+		TOH(3,'A','C','B');
+	}
+}
+
