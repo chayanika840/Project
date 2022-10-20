@@ -1,0 +1,54 @@
+import java.util.ArrayDeque;
+
+class pair{
+	int element;
+	int numMin;
+	pair(int ele, int nm){
+		element = ele;
+		numMin = nm;
+	}
+}
+
+public class Test {
+	public static void main(String[]args)
+    {
+		
+		int res = 0;
+		int arr[] = {3,1,2,4};
+		int left[] = new int[arr.length];
+		int right[] = new int [arr.length];
+		
+		ArrayDeque<pair>stack1 = new ArrayDeque<>();
+    	ArrayDeque<pair>stack2 = new ArrayDeque<>();
+	
+		// filling left array
+	
+		for (int i=0 ; i<arr.length; i++) {
+			int count = 1;
+			while(stack1.size()!=0 && stack1.peek().element > arr[i]) {
+				count = count+stack1.peek().numMin;
+				stack1.pop();
+			}
+			stack1.push(new pair(arr[i],count));
+			left[i]=count;
+		}
+		
+		//right array
+		
+		for (int i=arr.length-1 ; i>=0; i--) {
+			int count = 1;
+			while(stack2.size()!=0 && stack2.peek().element >= arr[i]) {
+				count = count+stack2.peek().numMin;
+				stack2.pop();
+			}
+			stack2.push(new pair(arr[i],count));
+			right[i]=count;
+		}
+		
+		for(int i=0 ; i<arr.length; i++) {
+			res=res+arr[i]*left[i]*right[i];
+		}
+		System.out.println(res);
+}
+}
+
